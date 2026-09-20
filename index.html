@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quebra-Cabeça Infantil</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4CAF50">
+</head>
+<body>
+  <h1>🧩 Quebra-Cabeça dos Animais</h1>
+  <p>Arraste cada animal para a sua sombra!</p>
+
+  <div class="game-container">
+    <div class="column" id="pieces">
+      <!-- Peças carregadas via JS -->
+    </div>
+    <div class="column" id="targets">
+      <!-- Alvos carregados via JS -->
+    </div>
+  </div>
+
+  <button id="reset-btn" onclick="initGame()">Jogar Novamente 🔄</button>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js');
+    }
+  </script>
+</body>
+</html>
