@@ -1,0 +1,76 @@
+body {
+  font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+  text-align: center;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #ff6f61;
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 30px auto;
+  max-width: 500px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.draggable, .target {
+  width: 80px;
+  height: 80px;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  user-select: none;
+}
+
+.draggable {
+  background-color: #ffe066;
+  cursor: grab;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.target {
+  background-color: #e0e0e0;
+  border: 3px dashed #bbb;
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+
+.target.hovered {
+  border-color: #4CAF50;
+  background-color: #d4edda;
+}
+
+.target.matched {
+  filter: grayscale(0%);
+  opacity: 1;
+  border: 3px solid #4CAF50;
+  background-color: #c8e6c9;
+}
+
+#reset-btn {
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#reset-btn:hover {
+  background-color: #ee5253;
+}
